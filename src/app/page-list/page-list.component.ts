@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-list',
   templateUrl: './page-list.component.html',
   styleUrl: './page-list.component.sass'
 })
-export class PageListComponent {
+export class PageListComponent implements OnInit {
+
+    public toDoShow: boolean;
+    public toDoDoneShow: boolean;
+
+    constructor() {
+      this.toDoShow = true
+      this.toDoDoneShow = false
+    }
+
+    ngOnInit(): void {
+    
+    }
 
 }
